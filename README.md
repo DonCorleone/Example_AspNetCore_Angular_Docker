@@ -10,3 +10,5 @@ This application is a small product manager app to use the following technologie
 * Docker conteiners
 
 The app has three different containers (one per component).
+
+https://kieldev.wordpress.com/2017/02/25/deploying-an-angular-2-net-core-1-1-web-api-and-mongodb-using-docker-containers/
