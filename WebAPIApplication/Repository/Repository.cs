@@ -17,7 +17,7 @@ namespace WebAPIApplication.Repository
         public Repository(string collectionName)
         {
             this._collectionName = collectionName;
-            string connectionString = "mongodb://mongodb:27017";
+            string connectionString = "mongodb://127.0.0.1:1111";
             MongoClientSettings settings = MongoClientSettings.FromUrl(new MongoUrl(connectionString));
             _client = new MongoClient(settings);
             _database = _client.GetDatabase("productmanager");

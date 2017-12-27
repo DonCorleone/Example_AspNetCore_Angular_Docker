@@ -16,7 +16,7 @@ services:
     container_name: nodeapp
     image: nodeapp
     build:
-      context: ./productsmanager
+      context: ./client
       dockerfile: .docker/Dockerfile
 #    volumes:
 #      - ./productsmanager/src:/var/www/productsmanager
@@ -32,6 +32,8 @@ services:
     image: mongo
     networks:
       - webapi-network
+    ports:
+      - "1111:27017"
 
 networks:
   webapi-network:
