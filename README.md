@@ -1,13 +1,10 @@
-# ASPNET Core 1.1 Web API - Angular 2 - MongoDb ProductsManager
-Angular2 ASPNET_Core WebAPI and MongoDb app - ProductsManager
-
-
 This application is a small product manager app to use the following technologies:
 
-* Angular 2 (front-end)
-* ASPNet Core Web API (back-end)
+* Angular 5 (front-end)
+* Angular Material 5
+* ASPNet Core Web API 2.0 (back-end)
 * MongoDB (database)
-* Docker conteiners
+* Docker Containers
 
 The app has three different containers (one per component).
 
@@ -16,4 +13,5 @@ https://kieldev.wordpress.com/2017/02/25/deploying-an-angular-2-net-core-1-1-web
 https://github.com/skielo/ASPNETCoreWebAPIAngular2MongoDbProductsManager
 
 ToDo : 
-docker-compose build
+    docker-compose build
+    docker-compose up -d
