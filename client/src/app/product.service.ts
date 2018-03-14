@@ -3,12 +3,13 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ProductService {
 
   private url = 'http://localhost/api/';
+// Docker  private url = 'http://localhost:5000/api/';
 
   constructor(private _http: Http) { }
 

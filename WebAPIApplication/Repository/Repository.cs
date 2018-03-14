@@ -17,7 +17,8 @@ namespace WebAPIApplication.Repository
         public Repository(string collectionName)
         {
             this._collectionName = collectionName;
-            string connectionString = "mongodb://127.0.0.1:1111";
+            // local : string connectionString = "mongodb://127.0.0.1:1111";
+            string connectionString = "mongodb://mongodb:27017";
             MongoClientSettings settings = MongoClientSettings.FromUrl(new MongoUrl(connectionString));
             _client = new MongoClient(settings);
             _database = _client.GetDatabase("productmanager");
@@ -42,11 +43,11 @@ namespace WebAPIApplication.Repository
 
         protected T Get(string id)
         {
-            return this._collection.Find(new BsonDocument { { "Id", new ObjectId(id) } }).FirstAsync().Result;
+            return this._collection.Find(new BsonDocument { { "_id", new ObjectId(id) } }).FirstAsync().Result;
         }
         protected T Get(ObjectId id)
         {
-            return this._collection.Find(new BsonDocument { { "Id", id } }).FirstAsync().Result;
+            return this._collection.Find(new BsonDocument { { "_id", id } }).FirstAsync().Result;
         }
         protected T Update(string id, T obj)
         {

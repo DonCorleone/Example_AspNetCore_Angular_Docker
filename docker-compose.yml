@@ -33,7 +33,8 @@ services:
     networks:
       - webapi-network
     ports:
-      - "1111:27017"
+#      - "1111:27017"
+      - "27017:27017"
 
 networks:
   webapi-network:
